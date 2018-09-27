@@ -1,11 +1,12 @@
 # coding:utf-8
 import requests
 import json
+import os
 
 def get_news():
     payload = {
         'country' : 'jp',
-        'apiKey' : '846b52ee5c4c4a1592c3d0a3f92434dd'
+        'apiKey' : os.environ['NEWS_API_KEY']
     }
 
     news_json = requests.get('https://newsapi.org/v2/top-headlines', params = payload).json()
