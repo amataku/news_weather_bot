@@ -17,9 +17,9 @@ def get_news():
         title = "[" + news_dict["title"] + "]"
         news += title
         news += "\n"
-        news += unicode(news_dict["description"])
+        news += str(news_dict["description"])
         news += "\n"
-        news += unicode(news_dict["url"])
+        news += str(news_dict["url"])
         news += "\n"
         news += "\n"
 
